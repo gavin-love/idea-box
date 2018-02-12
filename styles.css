@@ -1,0 +1,90 @@
+body {
+	margin: 0;
+}
+.content-container {
+	text-align: center;
+}
+
+.input-article {
+	padding-top: 50px;
+	height: 500px;
+	width: 100%;
+	background-color: #E5F3F2;
+	font-family: roboto-slab;
+	font-weight: 700;
+}
+
+.input-return-data {
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	margin-bottom: 20px;
+	color: #00A79D;
+	font-size: 100px;
+	margin-top:0;
+}
+hr {
+	margin-bottom: 30px;
+}
+
+.body-input {
+	margin: 20px;
+}
+.title-input {
+	margin: 20px;
+}
+.all-inputs {
+	width: 60%;
+	height: 50px;
+	font-size: 35px;
+}
+.second-title-word {
+	color: #6D6E71;
+}
+.save-button {
+	height: 70px;
+	background-color: #00A79D;
+	color: #FFF;
+	margin: 50px;
+}
+.return-data {
+	color: #6D6E71;
+}
+.button-style {
+	height: 50px;
+	width: 50px;
+	padding-right: 20px;
+}
+.delete-button {
+	float: right;
+}
+.quality {
+	font-size: 35px;
+	display: inline-block;
+}
+.search-style {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.return-data {
+	margin-left: 20%;
+	margin-right: 20%;
+	text-align: left;
+}
+.search-input {
+	width: 100%;
+	height: 50px;
+	font-size: 35px;
+}
+.idea-card{
+	margin: 0;
+	font-size: 40px;
+}
+.idea-card-body {
+	font-size: 30px;
+}
+.quality-position {
+}
+
