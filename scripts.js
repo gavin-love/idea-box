@@ -9,6 +9,8 @@ function Card(title, body, id, quality) {
   this.quality = quality || "swill"
 }
 
+$(document).ready(pullFromLocal);
+
 function cardPrepend(newCard) {
   $(".ideas-article").prepend(`<article id="${newCard.id}" class="idea-card">
         <h2 class="card-title">${newCard.title}</h2>
@@ -21,10 +23,34 @@ function cardPrepend(newCard) {
         <hr>
       </article>`)
 }
+
+
 $('button').on('click', saveButton)
 function saveButton(e) {
   e.preventDefault()
-
   var newCard = new Card(cardTitle.val(), cardBody.val())
   cardPrepend(newCard)
+  addToLocal(newCard)
+  clearFields()
 }
+
+
+function clearFields(){
+  cardTitle.val("");
+  cardBody.val("");
+} 
+
+function addToLocal(newCard) {
+  var stringifyObj  = JSON.stringify(newCard);
+  localStorage.setItem(newCard.id, stringifyObj)
+}
+
+function pullFromLocal() {
+  for(i=0; i < localStorage.length; i++) {
+    var getCard = localStorage.getItem(localStorage.key(i));
+    var newCard = JSON.parse(getCard);
+    cardPrepend(newCard)
+  }
+
+}
+
