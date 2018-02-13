@@ -24,6 +24,13 @@ function cardPrepend(newCard) {
       </article>`)
 }
 
+$(".ideas-article").on('click','.delete-button', deleteCard)
+
+function deleteCard() {
+  var card = this.closest("article").id
+  localStorage.removeItem(card)
+  this.closest("article").remove()
+}
 
 $('button').on('click', saveButton)
 function saveButton(e) {
