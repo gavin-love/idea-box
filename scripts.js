@@ -13,15 +13,15 @@ $(document).ready(pullFromLocal);
 
 function cardPrepend(newCard) {
   $(".ideas-article").prepend(`<article id="${newCard.id}" class="idea-card">
-        <h2 class="card-title">${newCard.title}</h2>
-        <button class="delete-button">Delete</button>
-        <p class="idea-card-body">${newCard.body}</p>
-        <button class="upvote-button">upvote</button>
-        <button class="downvote-button">downvote</button>
-        <p class="quality">quality:</p>
-        <p class="quality-value">${newCard.quality}</p>
-        <hr>
-      </article>`)
+    <h2 class="card-title">${newCard.title}</h2>
+    <button class="delete-button">Delete</button>
+    <p class="idea-card-body">${newCard.body}</p>
+    <button class="upvote-button">upvote</button>
+    <button class="downvote-button">downvote</button>
+    <p class="quality">quality:</p>
+    <p class="quality-value">${newCard.quality}</p>
+    <hr>
+    </article>`)
 }
 
 $(".ideas-article").on('click','.delete-button', deleteCard)
@@ -61,3 +61,19 @@ function pullFromLocal() {
 
 }
 
+
+function upVote(event) {
+  var parentId = $(event.target).parent().attr("id")
+  var currentQuality = $(event.target).siblings(".quality-value");
+  if ($(currentQuality).text() === "swill") {
+    $(currentQuality).text("plausible")
+  } else if ($(currentQuality).text() === "plausible") {
+    $(currentQuality).text("GENIUS")
+  }
+  var parsedCard = JSON.parse(localStorage.getItem(parentId))
+  parsedCard.quality = $(currentQuality).text()
+  localStorage.setItem(parsedCard.id, JSON.stringify(parsedCard))
+}
+
+$(".ideas-article").on('click', '.upvote-button', upVote)
+// start downvote button here
