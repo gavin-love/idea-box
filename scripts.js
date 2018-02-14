@@ -76,4 +76,22 @@ function upVote(event) {
 }
 
 $(".ideas-article").on('click', '.upvote-button', upVote)
-// start downvote button here
+
+
+
+function downVote(event) {
+  var parentId = $(event.target).parent().attr("id")
+  var currentQuality = $(event.target).siblings(".quality-value");
+  if ($(currentQuality).text() === "GENIUS") {
+    $(currentQuality).text("plausible")
+  } else if ($(currentQuality).text() === "plausible") {
+    $(currentQuality).text("swill")
+  }
+  var parsedCard = JSON.parse(localStorage.getItem(parentId))
+  parsedCard.quality = $(currentQuality).text()
+  localStorage.setItem(parsedCard.id, JSON.stringify(parsedCard))
+}
+
+$(".ideas-article").on('click', '.downvote-button', downVote)
+
+

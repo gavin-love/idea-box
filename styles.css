@@ -7,9 +7,19 @@ html, body {
   width: 100%;
   height: 100%;
 }
+h1 {
+  color: #00A79D;
+  font-family: Roboto-Slab;
+}
+
+.second-title-word {
+  color: #6D6E71
+}
 
 .page-content {
-  height: 100%;
+ width: 100%;
+ font-size: 50px;
+ background-color: #E5F3F2;
 }
 
 .input-article {
@@ -20,6 +30,7 @@ html, body {
 section, article, form {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 section {
@@ -29,31 +40,13 @@ section {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .idea-card {
   border: 5px solid green;
+}
+
+.save-button {
+  color: #FFF;
+  background-color: #00A79D;
+  width: 65%;
+  text-align: center;
 }
