@@ -12,14 +12,18 @@ function Card(title, body, id, quality) {
 $(document).ready(pullFromLocal);
 
 function cardPrepend(newCard) {
-  $(".ideas-article").prepend(`<article id="${newCard.id}" class="idea-card">
+  $(".ideas-article").prepend(`
+    <article id="${newCard.id}" class="idea-card">
     <h2 class="card-title">${newCard.title}</h2>
-    <button class="delete-button">Delete</button>
+    <button class="delete-button"><img class="icon" src="delete.svg"></button>
     <p class="idea-card-body">${newCard.body}</p>
-    <button class="upvote-button">upvote</button>
-    <button class="downvote-button">downvote</button>
-    <p class="quality">quality:</p>
+    </br>
+      <div>
+    <button class="upvote-button"><img class="icon" src="upvote.svg"></button>
+    <button class="downvote-button"><img class="icon" src="downvote (1).svg"></button>
+    <p class="quality">quality:   </p>
     <p class="quality-value">${newCard.quality}</p>
+     </div>
     <hr>
     </article>`)
 }
@@ -41,7 +45,6 @@ function saveButton(e) {
   clearFields()
 }
 
-
 function clearFields(){
   cardTitle.val("");
   cardBody.val("");
@@ -61,7 +64,6 @@ function pullFromLocal() {
 
 }
 
-
 function upVote(event) {
   var parentId = $(event.target).parent().attr("id")
   var currentQuality = $(event.target).siblings(".quality-value");
@@ -77,8 +79,6 @@ function upVote(event) {
 
 $(".ideas-article").on('click', '.upvote-button', upVote)
 
-
-
 function downVote(event) {
   var parentId = $(event.target).parent().attr("id")
   var currentQuality = $(event.target).siblings(".quality-value");
@@ -93,5 +93,4 @@ function downVote(event) {
 }
 
 $(".ideas-article").on('click', '.downvote-button', downVote)
-
 
