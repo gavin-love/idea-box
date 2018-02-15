@@ -15,18 +15,21 @@ function cardPrepend(newCard) {
   $(".ideas-article").prepend(`
     <article id="${newCard.id}" class="idea-card">
     <h2 class="card-title">${newCard.title}</h2>
-    <button class="delete-button"><img class="icon" src="delete.svg"></button>
+    <button class="delete-button"></button>
     <p class="idea-card-body">${newCard.body}</p>
     </br>
       <div>
-    <button class="upvote-button"><img class="icon" src="upvote.svg"></button>
-    <button class="downvote-button"><img class="icon" src="downvote (1).svg"></button>
+    <button class="upvote-button">
+    </button>
+    <button class="downvote-button">
+    </button>
     <p class="quality">quality:   </p>
     <p class="quality-value">${newCard.quality}</p>
      </div>
     <hr>
     </article>`)
 }
+
 
 $(".ideas-article").on('click','.delete-button', deleteCard)
 
