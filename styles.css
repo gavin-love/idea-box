@@ -1,8 +1,8 @@
 html {
-  width: 100%;
-  height: 100%;
   font-family: 'Open Sans', sans-serif;
+  height: 100%;
   text-align: center;
+  width: 100%;
 }
 
 h1 {
@@ -13,8 +13,8 @@ h1 {
   padding: 30px;
 }
 hr {
-  width: 100%;
   background-color: black;
+  width: 100%;
 }
 span {
   margin-top: 300px;
@@ -29,8 +29,8 @@ span {
 }
 
 .input-article {
-  height: 40%;
   background-color: #E5F3F2;
+  height: 40%;
 }
 
 .idea-card {
@@ -39,16 +39,16 @@ span {
 }
 
 .save-button {
-  color: #FFF;
   background-color: #00A79D;
-  width: 65%;
-  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  height: 50px;
+  margin-bottom: 60px ;
   margin-left: 17.5%;
   margin-right: 17.5%;
-  height: 50px;
   margin-top: 50px;
-  font-size: 20px;
-  margin-bottom: 60px ;
+  text-align: center;
+  width: 65%;
 }
 
 .save-button:hover {
@@ -56,63 +56,63 @@ span {
 }
 
 input { 
-    width: 65%;
-    margin-top: 50px;
-    height: 40px;
-    font-size: 25px;
     border: 2px solid #939598;
+    font-size: 25px;
+    height: 40px;
+    margin-top: 50px;
+    width: 65%;
   }
 
   .search-input {
-    margin-top: 30px;
     border: 2px solid #939598;
     color: #939598;
+    margin-top: 30px;
   }
 
   .search-input-form {
-    margin-top: 30px;
     background-color: white;
+    margin-top: 30px;
   }
 
   .ideas-article {
-    margin-top: 60px;
     background-color: #FFF;
+    margin-top: 60px;
   }
 
   .card-title {
-    font-size: 30px;
     color: #6D6E71;
+    font-size: 30px;
     margin-top: 0;
     text-align: left;
   }
 
   .delete-button {
-    width: 10%;
-    position: relative;
     margin-left: 90%;
-    margin-top: 30px;
     margin-right: 10%
+    margin-top: 30px;
+    position: relative;
+    width: 10%;
   }
 
   .idea-card-body {
-    text-align: left;
-    height: 50px;
-    position: absolute;
     color: #939598;
     font-size: 20px;
+    height: 50px;
     margin-top: 0;
+    position: absolute;
+    text-align: left;
   }
 
   .upvote-button {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    background-color: transparent;
+    background-image: url('upvote.svg');
+    border: 0px solid #fff;
     display: inline-block;
     float: left;
     height: 50px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     width: 50px;
-    background-color: transparent;
-    border: 0px solid #fff;
-    background-image: url('upvote.svg');
 
   }
 .icon {
@@ -123,15 +123,15 @@ input {
     margin: 20px;
   }
   .downvote-button {
+    background-color: transparent;
+    background-image: url('downvote (1).svg');
+    border: 0px solid #fff;
     float: left;
-    margin-top: 15px;
+    height: 50px;
     margin-bottom: 15px;
     margin-right: 5px;
-    height: 50px;
+    margin-top: 15px;
     width: 50px;
-    background-color: transparent;
-    border: 0px solid #fff;
-    background-image: url('downvote (1).svg');
   }
   .downvote-button:hover  {
     background-image: url('downvote-hover (1).svg');
@@ -143,27 +143,27 @@ input {
     background-image: url('delete-hover.svg');
   }
   .delete-button {
+    background-color: #FFF;
+    background-image: url('delete.svg');
+    border: 0px solid #fff;
     float: left;
-    margin-top: 15px;
+    height: 50px;
     margin-bottom: 15px;
     margin-right: 5px;
+    margin-top: 15px;
     width: 4%;
-    height: 50px;
     width: 50px;
-    background-color: #FFF;
-    border: 0px solid #fff;
-    background-image: url('delete.svg');
   }
   .quality { 
-    float: left;
-    margin-right: 10px;
     color: #6D6E71;
+    float: left;
     font-size: 22px;
     margin-left: 20px;
+    margin-right: 10px;
     }
 
    .quality-value {
-    float: left;
     color: #6D6E71;
+    float: left;
     font-size: 22px;
    }

@@ -1,4 +1,3 @@
-
 var cardTitle = $(".title-input")
 var cardBody = $(".body-input")
 
@@ -30,11 +29,11 @@ function cardPrepend(newCard) {
     </article>`)
 }
 
-
 $(".ideas-article").on('click','.delete-button', deleteCard)
 
 function deleteCard() {
   var card = this.closest("article").id
+  
   localStorage.removeItem(card)
   this.closest("article").remove()
 }
@@ -55,6 +54,7 @@ function clearFields(){
 
 function addToLocal(newCard) {
   var stringifyObj  = JSON.stringify(newCard);
+  
   localStorage.setItem(newCard.id, stringifyObj)
 }
 
@@ -64,17 +64,18 @@ function pullFromLocal() {
     var newCard = JSON.parse(getCard);
     cardPrepend(newCard)
   }
-
 }
 
 function upVote(event) {
   var parentId = $(event.target).parent().attr("id")
   var currentQuality = $(event.target).siblings(".quality-value");
+  
   if ($(currentQuality).text() === "swill") {
     $(currentQuality).text("plausible")
   } else if ($(currentQuality).text() === "plausible") {
     $(currentQuality).text("GENIUS")
   }
+
   var parsedCard = JSON.parse(localStorage.getItem(parentId))
   parsedCard.quality = $(currentQuality).text()
   localStorage.setItem(parsedCard.id, JSON.stringify(parsedCard))
@@ -85,11 +86,13 @@ $(".ideas-article").on('click', '.upvote-button', upVote)
 function downVote(event) {
   var parentId = $(event.target).parent().attr("id")
   var currentQuality = $(event.target).siblings(".quality-value");
+  
   if ($(currentQuality).text() === "GENIUS") {
     $(currentQuality).text("plausible")
   } else if ($(currentQuality).text() === "plausible") {
     $(currentQuality).text("swill")
   }
+
   var parsedCard = JSON.parse(localStorage.getItem(parentId))
   parsedCard.quality = $(currentQuality).text()
   localStorage.setItem(parsedCard.id, JSON.stringify(parsedCard))
